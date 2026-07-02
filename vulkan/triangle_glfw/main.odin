@@ -161,7 +161,7 @@ main :: proc() {
 		dbg_create_info := vk.DebugUtilsMessengerCreateInfoEXT {
 			sType           = .DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT,
 			messageSeverity = severity,
-			messageType     = {.GENERAL, .VALIDATION, .PERFORMANCE },
+			messageType     = {.GENERAL, .VALIDATION, .PERFORMANCE},
 			pfnUserCallback = vk_messenger_callback,
 		}
 		create_info.pNext = &dbg_create_info
