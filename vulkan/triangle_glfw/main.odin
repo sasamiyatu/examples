@@ -802,7 +802,7 @@ create_swapchain :: proc() {
 			must(vk.CreateImageView(g_device, &create_info, nil, &g_swapchain_views[i]))
 
 			semaphore_ci := vk.SemaphoreCreateInfo {
-				sType = .SEMAPHORE_CREATE_INFO
+				sType = .SEMAPHORE_CREATE_INFO,
 			}
 			must(vk.CreateSemaphore(g_device, &semaphore_ci, nil, &g_render_finished_semaphores[i]))
 		}
